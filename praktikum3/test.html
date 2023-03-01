@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator Sederhana</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style lang="javascript">
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			font-family: sans-serif;
+			background-color: #f5f5f5;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		form {
+			background-color: white;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 10px;
+			align-items: center;
+		}
+		input[type="number"] {
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+		}
+		input[type="submit"] {
+			padding: 10px;
+			background-color: #008CBA;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			grid-column: span 4;
+		}
+		input[type="submit"]:hover {
+			background-color: #006A9D;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="number" id="bil1" placeholder="Bilangan 1">
+		<input type="number" id="bil2" placeholder="Bilangan 2">
+		<input type="submit" value="+" onclick="tambah()">
+		<input type="submit" value="-" onclick="kurang()">
+		<input type="submit" value="x" onclick="kali()">
+		<input type="submit" value="/" onclick="bagi()">
+		<input type="number" id="hasil" placeholder="Hasil" readonly>
+	</form>
+
+	<script>
+		function tambah() {
+			let bil1 = parseFloat(document.getElementById("bil1").value);
+			let bil2 = parseFloat(document.getElementById("bil2").value);
+			document.getElementById("hasil").value = bil1 + bil2;
+		}
+
+		function kurang() {
+			let bil1 = parseFloat(document.getElementById("bil1").value);
+			let bil2 = parseFloat(document.getElementById("bil2").value);
+			document.getElementById("hasil").value = bil1 - bil2;
+		}
+
+		function kali() {
+			let bil1 = parseFloat(document.getElementById("bil1").value);
+			let bil2 = parseFloat(document.getElementById("bil2").value);
+			document.getElementById("hasil").value = bil1 * bil2;
+		}
+
+		function bagi() {
+			let bil1 = parseFloat(document.getElementById("bil1").value);
+			let bil2 = parseFloat(document.getElementById("bil2").value);
+			document.getElementById("hasil").value = bil1 / bil2;
+		}
+	</script>
+</body>
+</html>

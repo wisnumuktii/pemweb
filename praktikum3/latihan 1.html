@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Penilaian Huruf</title>
+</head>
+
+<body>
+	<h1>Penilaian Huruf</h1>
+
+	<script>
+		// Meminta pengguna memasukkan nilai
+		var nilai = prompt("Masukkan nilai:");
+
+		// Validasi apakah nilai berada di antara 0-100
+		if (nilai < 0 || nilai > 100) {
+			document.write("Nilai yang dimasukkan tidak valid!");
+		} else {
+			// Hitung dan tampilkan hasil penilaian huruf
+			if (nilai >= 81) {
+				document.write("Nilai: " + nilai + "<br>Huruf: A");
+			} else if (nilai >= 71) {
+				document.write("Nilai: " + nilai + "<br>Huruf: AB");
+			} else if (nilai >= 66) {
+				document.write("Nilai: " + nilai + "<br>Huruf: B");
+			} else if (nilai >= 61) {
+				document.write("Nilai: " + nilai + "<br>Huruf: BC");
+			}
+			  else if (nilai >= 56) {
+				document.write("Nilai: " + nilai + "<br>Huruf: C");
+			}
+			  else if (nilai >= 41) {
+				document.write("Nilai: " + nilai + "<br>Huruf: D");
+			} else {
+				document.write("Nilai: " + nilai + "<br>Huruf: E");
+			}
+		}
+	</script>
+</body>
+
+</html>

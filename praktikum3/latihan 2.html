@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pengoprasian Kalkulator Sederhana</title>
+	<script lang="javascript">
+		function hitung() {
+			// Ambil nilai dari input Bil 1 dan Bil 2
+			var bil1 = parseInt(document.getElementById("bil1").value);
+			var bil2 = parseInt(document.getElementById("bil2").value);
+
+			// Ambil nilai operator dari tombol yang ditekan
+			var operator = document.getElementById("operator").value;
+
+			// Hitung hasil berdasarkan operator yang dipilih
+			if (operator == "+") {
+				var hasil = bil1 + bil2;
+			} else if (operator == "-") {
+				var hasil = bil1 - bil2;
+			} else if (operator == "*") {
+				var hasil = bil1 * bil2;
+			} else if (operator == "/") {
+				var hasil = bil1 / bil2;
+			}
+
+			// Tampilkan hasil pada input Hasil
+			document.getElementById("hasil").value = hasil;
+		}
+	</script>
+</head>
+<body>
+	<h1>Kalkulator</h1>
+	<label for="bil1">Bil 1:</label>
+	<input type="text" id="bil1"><br>
+	<label for="bil2">Bil 2:</label>
+	<input type="text" id="bil2"><br>
+	<label for="operator">Operator:</label>
+	<select id="operator">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select><br>
+	<button onclick="hitung()">Hitung</button><br>
+	<label for="hasil">Hasil:</label>
+	<input type="text" id="hasil"><br>
+
+	<script>
+		document.write("Dimodifikasi terakhir pada " + document.lastModified);
+	</script>
+</body>
+</html>
