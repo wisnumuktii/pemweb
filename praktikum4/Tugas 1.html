@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $(".sembunyi").click(function() {$("#foto").hide("slow") });
+    $(".tampil").click(function() {$("#foto").show("slow")} );
+    $(".sembunyi2").click(function() {$("#foto2").hide("slow") });
+    $(".tampil2").click(function() {$("#foto2").show("slow")} );
+    });
+    </script>   
+</head>
+<body>
+    <button class="sembunyi">sembunyikan</button>
+    <button class="tampil">tampilkan</button>
+    <hr>
+    <button class="sembunyi2">sembunyikan</button>
+    <button class="tampil2">tampilkan</button>
+    <p><img id="foto" src="pogba.jpg" width="800px"></p>
+    <p><img id="foto2" src="tesla.png" width="800px"></p>
+</body>
+ 
+</head>
+</html>

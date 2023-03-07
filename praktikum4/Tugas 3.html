@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Sebuah Yang Bisa Di Klik Kotak Fade In, Out, dan To</title>
+    <style>
+      #kotak {
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+        background-color: blue;
+        opacity: 1;
+      }
+      
+      button {
+        margin: 15px;
+        padding: 10px;
+      }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Tombol untuk fade out
+        $("#btn-fade-out").on("click", function() {
+          $("#kotak").fadeOut();
+        });
+        
+        // Tombol untuk fade in
+        $("#btn-fade-in").on("click", function() {
+          $("#kotak").fadeIn();
+        });
+        
+        // Tombol untuk fade to 0.3
+        $("#btn-fade-to").on("click", function() {
+          $("#kotak").fadeTo(1000, 0.3);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Berikut Adalah Kotak Interaksi Yang Bisa Fade Out, Fade In, Fade to 0.3</h1>
+    <div id="kotak"></div>
+    <button id="btn-fade-out">Fade Out</button>
+    <button id="btn-fade-in">Fade In</button>
+    <button id="btn-fade-to">Fade To 0.3</button>
+  </body>
+</html>

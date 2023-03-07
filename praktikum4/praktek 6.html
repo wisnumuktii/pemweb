@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setTimeout(function () {
+                $("#kotak").fadeOut("slow", function () {
+                    $("#kotak").remove();
+                });
+            }, 3000);
+        });
+    </script>
+    <style type="text/css">
+        #kotak {
+            width: 300px;
+            height: 70px;
+            background: lightyellow;
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<h3 id="kotak">
+    perhatikan baik -baik teks ini, karena teks akan hilang dalam
+    hitungan 3 detik
+</h3>
+</html>

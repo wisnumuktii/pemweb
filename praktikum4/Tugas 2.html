@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Implementasi 4 kotak berubah warna apabila di klik 2X</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .kotak {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: red;
+      }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".kotak").on("dblclick", function() {
+          if ($(this).css("background-color") == "rgb(255, 0, 0)") {
+            $(this).css("background-color", "blue");
+          } else {
+            $(this).css("background-color", "red");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center;"> klik 2X pada kotak untuk merubah wanrna kotak</h1>
+    <div class="container">
+      <div class="kotak"></div>
+      <div class="kotak"></div>
+      <div class="kotak"></div>
+      <div class="kotak"></div>
+    </div>
+  </body>
+</html>
