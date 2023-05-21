@@ -4,8 +4,8 @@
 <head>
     <title>Formulir Pendaftaran Siswa Baru</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -469,7 +469,19 @@
                         <option value="Lainnya">Lainnya</option>
                     </select>
                 </div>
-                <div class="form-group text-center">
+                <div class="text-center">
                     <button type="submit" class="btn btn-primary">Kirim</button>
+                    <div class="btn-group">
+                        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                            Export to Excel
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="reportdatasiswa.php">Export Data Siswa to Excel</a></li>
+                            <li><a href="reportdatapribadi.php">Export Data Pribadi to Excel</a></li>
+                            <li><a href="reportdataibu.php">Export Data Ibu to Excel</a></li>
+                            <li><a href="reportdataayah.php">Export Data Ayah to Excel</a></li>
+                        </ul>
+                    </div>
                 </div>
         </form>
